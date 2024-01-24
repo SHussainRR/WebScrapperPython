@@ -6,7 +6,7 @@ node {
     withSonarQubeEnv() {
       def sonarRunner = tool name: 'SonarTest', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
       bat "echo %SONAR_HOST_URL%"
-      bat "%scannerHome%\\bin\\sonar-scanner.bat"
+      bat "%sonarRunner%\\bin\\sonar-scanner.bat"
     }
   }
 }
