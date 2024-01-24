@@ -6,7 +6,7 @@ node {
     def scannerHome = tool 'SonarTest';
     withSonarQubeEnv() {
       bat "echo %SONAR_HOST_URL%"
-      bat "%scannerHome%/bin/sonar-scanner"
+      bat "%scannerHome%\\bin\\sonar-scanner.bat"
     }
   }
 }
