@@ -5,7 +5,7 @@ node {
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarTest';
     withSonarQubeEnv() {
-      println ${env.SONAR_HOST_URL}
+      bat "echo %SONAR_HOST_URL%"
       bat "%scannerHome%/bin/sonar-scanner"
     }
   }
